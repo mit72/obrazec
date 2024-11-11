@@ -7,12 +7,14 @@
     <title>Vpisnica v Goriško knjižnjico Franceta Bevka </title>
     <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="glavni">
+        <div class="glava"><span>Goriška knjižnjica Franceta Bevka</span></div>
         <div class="formMain">
             <form id="forma">
-                <div class="title">Vpisnica v Goriško knjižnjico Franceta Bevka </div>
+                <div class="title">Vpisnica</div>
                 <div class="formImePriimek">
                     <div class="ime">
                         <label class="obv" for="ime">Ime:</label>
@@ -27,13 +29,13 @@
                 <div class="datumRojstva"> 
                     <label class="obv" for="datumRojstva">Datum rojstva:</label>
                     <br>
-                    <input  type="date" id="datumRojstva" name="datumRojstva" required>
+                    <input  type="date" id="datumRojstva" name="datumRojstva" required >
                 </div>
 
                 <div class="kategorjia">
                     <label class="obv" for="kategorjia">Izberite kategorijo:</label>
-                    <select name="kategorjia" id="kategorjia">
-                        <option disabled selected hidden>Kategorija članarine</option>
+                    <select name="kategorjia" id="kategorija" required>
+                        <option value="" class="siva" disabled selected hidden>Kategorija članarine</option>
                         <option>študenti (redni) (€ 10.00)</option>
                         <option>študenti (izredni, ob delu) (€ 10.00)</option>
                         <option>zaposleni (€ 20.00)</option>
@@ -45,7 +47,7 @@
                 <div class="drzava">
                     <label class="obv" for="drzava">Država:</label>
                     <select name="drzava" id="drzava" required>
-                        <option value="" disabled selected hidden>Izberite državo</option>
+                        <option value="" class="siva" disabled selected hidden>Izberite državo</option>
                         <option value="Slovenia">Slovenia</option>
                         <option value="Italy">Italy</option>
                         <option value="Austria">Austria</option>
@@ -244,7 +246,7 @@
                         <option value="Yemen">Yemen</option>
                         <option value="Zambia">Zambia</option>
                         <option value="Zimbabwe">Zimbabwe</option>
-                        </select>
+                    </select>
                 </div>
 
                 <div class="formImePriimek">
@@ -278,52 +280,6 @@
         </div>
     </div>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                new Cleave('#postnaStevilka', {
-                    numeral: true,
-                    numeralPositiveOnly: true,
-                    numeralIntegerScale: 4,
-                    numeralDecimalScale: 0,
-                    numeralThousandsGroupStyle: 'none'
-                });
-
-                document.getElementById("forma").addEventListener("submit", function(event) {
-                    event.preventDefault(); 
-
-                
-                    const birthdateInput = document.getElementById("datumRojstva").value;
-                    const birthdate = new Date(birthdateInput);
-
-                    
-                    const today = new Date();
-                    const fifteenYearsAgo = new Date();
-                    fifteenYearsAgo.setFullYear(today.getFullYear() - 16);
-
-                    
-                    if (birthdate > fifteenYearsAgo) {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Premladi ste',
-                            text: 'Morate biti starejši od 16 let za včlanitev.',
-                        });
-                    } else {
-
-                        Swal.fire({
-                            title: "Uspeh!",
-                            text: "Vaša zahteva je bila oddana!",
-                            icon: "success"
-                            
-                        })
-                        .then((result) => {
-                            if (result.isConfirmed) {
-                                event.target.submit();
-                            }
-                        });
-                    }
-                });
-            });
-        </script>
 
 </body>
 </html>
