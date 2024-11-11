@@ -19,7 +19,7 @@ body, html {
     display: flex;
     justify-content: center; /*horizontalno*/
     align-items: center; /* vertikalno */
-    background-image: url(slike/odzadje3.png);
+    background-image: url(../slike/odzadje3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
