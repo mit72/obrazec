@@ -13,26 +13,37 @@ document.addEventListener("DOMContentLoaded", function() {
                 
         const birthdateInput = document.getElementById("datumRojstva").value;
         const birthdate = new Date(birthdateInput);
+           
 
-                    
         const today = new Date();
-        const fifteenYearsAgo = new Date();
-        fifteenYearsAgo.setFullYear(today.getFullYear() - 16);
+        const sestnajst = new Date();
+        sestnajst.setFullYear(today.getFullYear() - 16);
 
-                    
-        if (birthdate > fifteenYearsAgo) {
+       
+        if (birthdate > sestnajst) {
             Swal.fire({
                 icon: 'error',
                 title: 'Premladi ste',
                 text: 'Morate biti starejši od 16 let za včlanitev.',
+                confirmButtonText: 'OK',
+                iconColor: 'rgb(195, 45, 47)',
+                customClass: {
+                    confirmButton: 'premladi-sweet-alert',
+                    icon: 'premladi-icon',
+                    popup: 'border-sweet-alert',
+                }
             });
         } else {
 
             Swal.fire({
                 title: "Uspeh!",
                 text: "Vaša zahteva je bila oddana!",
-                icon: "success"
-                            
+                icon: "success",
+                
+                customClass: {
+                    confirmButton: 'premladi-sweet-alert',
+                    popup: 'border-sweet-alert',
+                }
             })
             .then((result) => {
                 if (result.isConfirmed) {
