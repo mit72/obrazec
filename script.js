@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             title: 'Avtor',
             text: 'Avtor te naloge je Mitja Filej, 4.Rb',
             icon: 'info',
-            confirmButtonText: 'OK'
+            confirmButtonText: 'OK',
             customClass: {
                     confirmButton: 'premladi-sweet-alert',
                     popup: 'border-sweet-alert',
