@@ -7,19 +7,30 @@ document.addEventListener("DOMContentLoaded", function() {
         numeralThousandsGroupStyle: 'none'
     });
 
+    const asterisk = document.querySelector('.credits');
+
+    asterisk.addEventListener('click', () => {
+
+        Swal.fire({
+            title: 'Avtor',
+            text: 'Avtor te naloge je Mitja Filej, 4.Rb',
+            icon: 'info',
+            confirmButtonText: 'OK'
+        });
+
+    });
+
     document.getElementById("forma").addEventListener("submit", function(event) {
         event.preventDefault(); 
 
                 
         const birthdateInput = document.getElementById("datumRojstva").value;
         const birthdate = new Date(birthdateInput);
-           
 
         const today = new Date();
         const sestnajst = new Date();
         sestnajst.setFullYear(today.getFullYear() - 16);
 
-       
         if (birthdate > sestnajst) {
             Swal.fire({
                 icon: 'error',
@@ -30,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 customClass: {
                     confirmButton: 'premladi-sweet-alert',
                     icon: 'premladi-icon',
-                    popup: 'border-sweet-alert',
+                    popup: 'border-sweet-alert'
                 }
             });
         } else {
@@ -52,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     });
+
     document.querySelector("#drzava").addEventListener("click", function() {
         this.style.color = "black";
     });
@@ -59,5 +71,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#kategorija").addEventListener("click", function() {
         this.style.color = "black";
     });
+
 });
 

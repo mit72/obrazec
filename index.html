@@ -19,11 +19,11 @@
                 <div class="formImePriimek">
                     <div class="ime">
                         <label class="obv" for="ime">Ime:</label>
-                        <input type="text" id="ime" name="ime" placeholder="Ime" required>
+                        <input type="text" id="ime" name="ime" placeholder="Ime" maxlength="20" required>
                     </div>
                     <div class="priimek">
                         <label class="obv" for="priimek" >Priimek:</label>
-                        <input type="text" id="priimek" name="priimek" placeholder="Priimek" required> 
+                        <input type="text" id="priimek" name="priimek" placeholder="Priimek" maxlength="20" required> 
                     </div>
                 </div>
 
@@ -264,13 +264,13 @@
 
                 <div>
                     <label class="obv" for="naslov">Ulica in hišna številka:</label>
-                    <input type="text" id="naslov" name="naslov" placeholder="Ulica in hišna številka stalnega prebivališča" required>
+                    <input type="text" id="naslov" name="naslov" placeholder="Ulica in hišna številka stalnega prebivališča" maxlength="50" required>
                 </div>
 
                 <div class="email">
                     <label class="obv" for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="E-mail" required>
-                    <span class="mali">Po koncu postopka na ta naslov prejmete e-sporočilo s povezavo za aktivacijo članstva.</span>
+                    <input type="email" id="email" name="email" placeholder="E-mail" maxlength="254" required> <!-- po standardu RFC 5321 in RFC 5322-->
+                    <span class="mali">Po koncu postopka na ta naslov prejmete e-sporočilo s povezavo za aktivacijo članstva.<span class="credits">*</span></span>
                 </div>
 
                 <div>
