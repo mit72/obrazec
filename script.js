@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
             text: 'Avtor te naloge je Mitja Filej, 4.Rb',
             icon: 'info',
             confirmButtonText: 'OK'
+            customClass: {
+                    confirmButton: 'premladi-sweet-alert',
+                    popup: 'border-sweet-alert',
+                }
         });
 
     });
@@ -50,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 title: "Uspeh!",
                 text: "Vaša zahteva je bila oddana!",
                 icon: "success",
-                
                 customClass: {
                     confirmButton: 'premladi-sweet-alert',
                     popup: 'border-sweet-alert',
