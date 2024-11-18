@@ -7,8 +7,7 @@ Obrazec za knjižnjico Nova Gorica
 
 ## Kratek opis
 
-Obrazec za vpis v Goriško knjižnjico Nova Gorica. V obrazcu so sweet alerti, ki te opozorijo o napakah, preverja stran ali so vsa polja izponjena. Struktura je v html-ju katero sem vizualno dopolnil z css in dodal funkcionalnost z javascriptom.
-
+Obrazec je zasnovan v HTML-ju, pri čemer sem dodal vizualne prilagoditve z uporabo CSS-a in funkcionalnost z JavaScriptom. Vključeni so tudi SweetAlert pop-upi, ki uporabnike opozorijo na morebitne napake ter preverijo, ali so vsa obvezna polja pravilno izpolnjena.
 
 ## Slike
 
@@ -16,6 +15,6 @@ Obrazec za vpis v Goriško knjižnjico Nova Gorica. V obrazcu so sweet alerti, k
 ![App Screenshot](slike/sweet.png)
 
 
-## Avtorji
+## Avtor
 
 Mitja Filej
