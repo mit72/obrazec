@@ -13,6 +13,7 @@ Obrazec za vpis v Goriško knjižnjico Nova Gorica. V obrazcu so sweet alerti, k
 ## Slike
 
 ![App Screenshot](slike/readme.png)
+![App Screenshot](slike/sweet.png)
 
 
 ## Avtorji
