@@ -46,13 +46,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     confirmButton: 'premladi-sweet-alert',
                     icon: 'premladi-icon',
                     popup: 'border-sweet-alert'
+                    
                 }
             });
         } else {
 
             Swal.fire({
-                title: "Uspeh!",
-                text: "Vaša zahteva je bila oddana!",
+                title: "Uspešno oddano!",
                 icon: "success",
                 customClass: {
                     confirmButton: 'premladi-sweet-alert',
