@@ -150,7 +150,8 @@ input[type="date"]::-webkit-calendar-picker-indicator /* ne dela na firefoxu*/ {
     border: 1px rgb(195, 45, 47) solid;
     border-radius: 4px;
     font-family:'Trebuchet MS', sans-serif;
-    overflow: none !important; /* important da library ne overrida*/
+    overflow: hidden !important;
+    overflow: hidden !important; /* important da library ne overrida*/
 }
 
 
